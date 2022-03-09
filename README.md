@@ -1,10 +1,10 @@
 # Nintendo Blocks Converter
 
-[![Latest version](https://img.shields.io/packagist/v/nickbeen/rick-and-morty-api-php)](https://packagist.org/packages/nickbeen/rick-and-morty-api-php)
-[![Build status](https://img.shields.io/github/workflow/status/nickbeen/rick-and-morty-api-php/Run%20tests)](https://packagist.org/packages/nickbeen/rick-and-morty-api-php)
-[![Total downloads](https://img.shields.io/packagist/dt/nickbeen/rick-and-morty-api-php)](https://packagist.org/packages/nickbeen/rick-and-morty-api-php)
-[![PHP Version](https://img.shields.io/packagist/php-v/nickbeen/rick-and-morty-api-php)](https://packagist.org/packages/nickbeen/rick-and-morty-api-php)
-[![License](https://img.shields.io/packagist/l/nickbeen/rick-and-morty-api-php)](https://packagist.org/packages/nickbeen/rick-and-morty-api-php)
+[![Latest version](https://img.shields.io/packagist/v/nickbeen/nintendo-blocks-converter)](https://packagist.org/packages/nickbeen/nintendo-blocks-converter)
+[![Build status](https://img.shields.io/github/workflow/status/nickbeen/nintendo-blocks-converter/Run%20tests)](https://packagist.org/packages/nickbeen/nintendo-blocks-converter)
+[![Total downloads](https://img.shields.io/packagist/dt/nickbeen/nintendo-blocks-converter)](https://packagist.org/packages/nickbeen/nintendo-blocks-converter)
+[![PHP Version](https://img.shields.io/packagist/php-v/nickbeen/nintendo-blocks-converter)](https://packagist.org/packages/nickbeen/nintendo-blocks-converter)
+[![License](https://img.shields.io/packagist/l/nickbeen/nintendo-blocks-converter)](https://packagist.org/packages/nickbeen/nintendo-blocks-converter)
 
 With this library you can convert Nintendo blocks to the actual filesize in Megabytes. It's also possible to convert the filesize in Megabytes to Nintendo blocks. No longer need to think twice whether you need to divide or multiply by 8, unless you've memorized 1 Nintendo block equals 1 Megabit.
 
