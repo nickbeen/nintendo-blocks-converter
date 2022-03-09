@@ -1,15 +1,41 @@
 {
-  "name": "$vendor_name$/$package_name$",
-  "description": "$description$",
-  "minimum-stability": "$stability$",
-  "license": "$license$",
-  "authors": [
-    {
-      "name": "$author$",
-      "email": "$email$"
-    }
-  ],
-  "require": {
-    $END$
-  }
+    "name": "nickbeen/nintendo-blocks-converter",
+    "description": "Convert Nintendo blocks to Megabytes and vice versa",
+    "type": "library",
+    "keywords": [
+        "nintendo",
+        "blocks",
+        "converter",
+        "php"
+    ],
+    "homepage": "https://github.com/nickbeen/nintendo-blocks-converter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nick Been",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "NickBeen\\NintendoConverter\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "NickBeen\\NintendoConverter\\Tests\\": "tests"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
