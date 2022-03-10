@@ -3,7 +3,7 @@ name: Run tests
 on:
   pull_request:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '53 13 * * 4'
 
 jobs:
   run-tests:
