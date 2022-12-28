@@ -1,7 +1,7 @@
 # Nintendo Blocks Converter
 
 [![Latest version](https://img.shields.io/packagist/v/nickbeen/nintendo-blocks-converter)](https://packagist.org/packages/nickbeen/nintendo-blocks-converter)
-[![Build status](https://img.shields.io/github/workflow/status/nickbeen/nintendo-blocks-converter/Run%20tests)](https://packagist.org/packages/nickbeen/nintendo-blocks-converter)
+[![Build status](https://img.shields.io/github/actions/workflow/status/nickbeen/nintendo-blocks-converter/run-tests.yml)](https://packagist.org/packages/nickbeen/nintendo-blocks-converter)
 [![Total downloads](https://img.shields.io/packagist/dt/nickbeen/nintendo-blocks-converter)](https://packagist.org/packages/nickbeen/nintendo-blocks-converter)
 [![PHP Version](https://img.shields.io/packagist/php-v/nickbeen/nintendo-blocks-converter)](https://packagist.org/packages/nickbeen/nintendo-blocks-converter)
 [![License](https://img.shields.io/packagist/l/nickbeen/nintendo-blocks-converter)](https://packagist.org/packages/nickbeen/nintendo-blocks-converter)
