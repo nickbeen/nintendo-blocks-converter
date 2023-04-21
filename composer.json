@@ -28,7 +28,9 @@
         }
     },
     "autoload-dev": {
-        "NickBeen\\NintendoConverter\\Tests\\": "tests"
+        "psr-4": {
+            "NickBeen\\NintendoConverter\\Tests\\": "tests"
+        }
     },
     "scripts": {
         "test": "vendor/bin/phpunit"
