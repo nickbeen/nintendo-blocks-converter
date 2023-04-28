@@ -30,7 +30,7 @@ class NintendoConverter
             throw new InvalidArgumentException();
         }
 
-        return $this->blocks / 8;
+        return $this->blocks / pow(2, 3);
     }
 
     /**
@@ -49,6 +49,6 @@ class NintendoConverter
             throw new InvalidArgumentException();
         }
 
-        return $this->megabytes * 8;
+        return $this->megabytes * pow(2, 3);
     }
 }
