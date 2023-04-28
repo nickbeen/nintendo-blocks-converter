@@ -15,6 +15,26 @@ class NintendoConverter
     }
 
     /**
+     * Number of Nintendo Blocks to convert from.
+     */
+    public function fromBlocks(int $blocks): self
+    {
+        $this->blocks = $blocks;
+
+        return $this;
+    }
+
+    /**
+     * Number of megabytes to convert from.
+     */
+    public function fromMegabytes(int|float $megabytes): self
+    {
+        $this->megabytes = $megabytes;
+
+        return $this;
+    }
+
+    /**
      * Convert Nintendo blocks to number of Megabytes
      *
      * @return float
