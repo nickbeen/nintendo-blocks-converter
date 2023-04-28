@@ -8,8 +8,8 @@ use NickBeen\NintendoConverter\Exceptions\UnnecessaryCalculation;
 class NintendoConverter
 {
     public function __construct(
-        public int $blocks = 0,
-        public float $megabytes = 0.0
+        public ?int $blocks = null,
+        public ?float $megabytes = null,
     ) {
         return $this;
     }
@@ -22,7 +22,7 @@ class NintendoConverter
      */
     public function toMegabytes(): float
     {
-        if ($this->blocks === 0) {
+        if (is_null($this->blocks)) {
             throw UnnecessaryCalculation::AlreadyInMegabytes();
         }
 
@@ -41,7 +41,7 @@ class NintendoConverter
      */
     public function toBlocks(): int|float
     {
-        if ($this->megabytes === 0.0) {
+        if (is_null($this->megabytes)) {
             throw UnnecessaryCalculation::AlreadyinBlocks();
         }
 
