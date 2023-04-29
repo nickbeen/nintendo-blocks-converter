@@ -7,10 +7,16 @@ use NickBeen\NintendoConverter\Exceptions\UnnecessaryCalculation;
 
 class NintendoConverter
 {
+    private ?int $bytes = null;
+
     public function __construct(
         public ?int $blocks = null,
         public ?float $megabytes = null,
     ) {
+        if (!is_null($megabytes)) {
+            $this->fromMegabytes($megabytes);
+        }
+
         return $this;
     }
 
@@ -29,7 +35,7 @@ class NintendoConverter
      */
     public function fromMegabytes(int|float $megabytes): self
     {
-        $this->megabytes = $megabytes;
+        $this->bytes = $megabytes * pow(1024, 2);
 
         return $this;
     }
@@ -37,10 +43,10 @@ class NintendoConverter
     /**
      * Convert Nintendo blocks to number of Megabytes
      *
-     * @return float
-     * @throws UnnecessaryCalculation|InvalidArgumentException
+     * @throws InvalidArgumentException
+     * @throws UnnecessaryCalculation
      */
-    public function toMegabytes(): float
+    public function toMegabytes(): int|float
     {
         if (is_null($this->blocks)) {
             throw UnnecessaryCalculation::AlreadyInMegabytes();
@@ -56,19 +62,19 @@ class NintendoConverter
     /**
      * Convert number of Megabytes to Nintendo blocks
      *
-     * @return int|float
-     * @throws UnnecessaryCalculation| InvalidArgumentException
+     * @throws InvalidArgumentException
+     * @throws UnnecessaryCalculation
      */
     public function toBlocks(): int|float
     {
-        if (is_null($this->megabytes)) {
+        if (is_null($this->bytes)) {
             throw UnnecessaryCalculation::AlreadyinBlocks();
         }
 
-        if ($this->megabytes < 0) {
+        if ($this->bytes < 0) {
             throw new InvalidArgumentException();
         }
 
-        return $this->megabytes * pow(2, 3);
+        return $this->bytes / pow(2, 17);
     }
 }
