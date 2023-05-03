@@ -3,7 +3,10 @@
 namespace NickBeen\NintendoConverter;
 
 use NickBeen\NintendoConverter\Exceptions\InvalidArgumentException;
+use NickBeen\NintendoConverter\Exceptions\NegativeNumberException;
 use NickBeen\NintendoConverter\Exceptions\UnnecessaryCalculation;
+
+class_alias(NegativeNumberException::class, InvalidArgumentException::class);
 
 class NintendoConverter
 {
@@ -43,7 +46,7 @@ class NintendoConverter
     /**
      * Convert Nintendo blocks to number of Megabytes
      *
-     * @throws InvalidArgumentException
+     * @throws NegativeNumberException
      * @throws UnnecessaryCalculation
      */
     public function toMegabytes(): int|float
@@ -53,7 +56,7 @@ class NintendoConverter
         }
 
         if ($this->blocks < 0) {
-            throw new InvalidArgumentException();
+            throw new NegativeNumberException();
         }
 
         return $this->blocks / pow(2, 3);
@@ -62,7 +65,7 @@ class NintendoConverter
     /**
      * Convert number of Megabytes to Nintendo blocks
      *
-     * @throws InvalidArgumentException
+     * @throws NegativeNumberException
      * @throws UnnecessaryCalculation
      */
     public function toBlocks(): int|float
@@ -72,7 +75,7 @@ class NintendoConverter
         }
 
         if ($this->bytes < 0) {
-            throw new InvalidArgumentException();
+            throw new NegativeNumberException();
         }
 
         return $this->bytes / pow(2, 17);
