@@ -2,7 +2,7 @@
 
 namespace NickBeen\NintendoConverter\Tests;
 
-use NickBeen\NintendoConverter\Exceptions\InvalidArgumentException;
+use NickBeen\NintendoConverter\Exceptions\NegativeNumberException;
 use NickBeen\NintendoConverter\Exceptions\UnnecessaryCalculation;
 use NickBeen\NintendoConverter\NintendoConverter;
 use PHPUnit\Framework\TestCase;
@@ -11,7 +11,8 @@ class NintendoConverterTest extends TestCase
 {
     /**
      * @test
-     * @throws UnnecessaryCalculation|InvalidArgumentException
+     * @throws NegativeNumberException
+     * @throws UnnecessaryCalculation
      */
     public function it_can_convert_blocks_to_megabytes()
     {
@@ -23,7 +24,8 @@ class NintendoConverterTest extends TestCase
 
     /**
      * @test
-     * @throws UnnecessaryCalculation|InvalidArgumentException
+     * @throws NegativeNumberException
+     * @throws UnnecessaryCalculation
      */
     public function it_can_convert_megabytes_to_blocks()
     {
@@ -35,7 +37,8 @@ class NintendoConverterTest extends TestCase
 
     /**
      * @test
-     * @throws UnnecessaryCalculation|InvalidArgumentException
+     * @throws NegativeNumberException
+     * @throws UnnecessaryCalculation
      */
     public function it_cannot_convert_blocks_to_blocks()
     {
@@ -49,7 +52,8 @@ class NintendoConverterTest extends TestCase
 
     /**
      * @test
-     * @throws UnnecessaryCalculation|InvalidArgumentException
+     * @throws NegativeNumberException
+     * @throws UnnecessaryCalculation
      */
     public function it_cannot_convert_megabytes_to_megabytes()
     {
@@ -63,11 +67,12 @@ class NintendoConverterTest extends TestCase
 
     /**
      * @test
-     * @throws UnnecessaryCalculation|InvalidArgumentException
+     * @throws NegativeNumberException
+     * @throws UnnecessaryCalculation
      */
     public function it_cannot_convert_negative_number_of_blocks()
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(NegativeNumberException::class);
 
         $blocks = new NintendoConverter(blocks: -8);
         $megabytes = $blocks->toMegabytes();
@@ -77,11 +82,12 @@ class NintendoConverterTest extends TestCase
 
     /**
      * @test
-     * @throws UnnecessaryCalculation|InvalidArgumentException
+     * @throws NegativeNumberException
+     * @throws UnnecessaryCalculation
      */
     public function it_cannot_convert_negative_number_of_megabytes()
     {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(NegativeNumberException::class);
 
         $megabytes = new NintendoConverter(megabytes: -1);
         $blocks = $megabytes->toBlocks();
