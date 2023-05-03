@@ -2,11 +2,23 @@
 
 All notable changes to `nintendo-blocks-converter` will be documented in this file.
 
-## [Unreleased](https://github.com/nickbeen/nintendo-blocks-converter/compare/1.1.0...HEAD)
+## [Unreleased](https://github.com/nickbeen/nintendo-blocks-converter/compare/1.2.0...HEAD)
 
 ## 1.0.0 - 2022-03-09
 
 - Initial stable release
+
+## [1.2.0](https://github.com/nickbeen/nintendo-blocks-converter/compare/1.1.0...1.2.0) - 2023-05-03
+
+<!-- Release notes generated using configuration in .github/release.yml at main -->
+### What's Changed
+
+#### Added
+
+- Switch to calculating from/to bytes for more accurate results by @nickbeen in https://github.com/nickbeen/nintendo-blocks-converter/pull/11
+- Implement NegativeNumberException and deprecate InvalidArgumentException by @nickbeen in https://github.com/nickbeen/nintendo-blocks-converter/pull/12
+
+**Full Changelog**: https://github.com/nickbeen/nintendo-blocks-converter/compare/1.1.0...1.2.0
 
 ## [1.1.0](https://github.com/nickbeen/nintendo-blocks-converter/compare/1.0.1...1.1.0) - 2023-04-28
 
