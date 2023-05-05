@@ -1,6 +1,6 @@
 <?php
 
-namespace NickBeen\NintendoConverter\Exceptions;
+namespace NickBeen\NintendoBlocksConverter\Exceptions;
 
 use Exception;
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace NickBeen\NintendoConverter\Tests;
+namespace NickBeen\NintendoBlocksConverter\Tests;
 
-use NickBeen\NintendoConverter\Exceptions\NegativeNumberException;
-use NickBeen\NintendoConverter\Exceptions\UnnecessaryCalculation;
-use NickBeen\NintendoConverter\NintendoConverter;
+use NickBeen\NintendoBlocksConverter\Exceptions\NegativeNumberException;
+use NickBeen\NintendoBlocksConverter\Exceptions\UnnecessaryCalculation;
+use NickBeen\NintendoBlocksConverter\NintendoBlocksConverter;
 use PHPUnit\Framework\TestCase;
 
-class NintendoConverterTest extends TestCase
+class NintendoBlocksConverterTest extends TestCase
 {
     /**
      * @test
@@ -16,7 +16,7 @@ class NintendoConverterTest extends TestCase
      */
     public function it_can_convert_blocks_to_megabytes()
     {
-        $nC = new NintendoConverter();
+        $nC = new NintendoBlocksConverter();
         $megabytes = $nC->fromBlocks(8)->toMegabytes();
 
         $this->assertEquals(1, $megabytes);
@@ -29,7 +29,7 @@ class NintendoConverterTest extends TestCase
      */
     public function it_can_convert_megabytes_to_blocks()
     {
-        $nC = new NintendoConverter();
+        $nC = new NintendoBlocksConverter();
         $blocks = $nC->fromMegabytes(1)->toBlocks();
 
         $this->assertEquals(8, $blocks);
@@ -44,7 +44,7 @@ class NintendoConverterTest extends TestCase
     {
         $this->expectException(UnnecessaryCalculation::class);
 
-        $blocks = new NintendoConverter(blocks: 8);
+        $blocks = new NintendoBlocksConverter(blocks: 8);
         $blocks = $blocks->toBlocks();
 
         $this->assertEquals(8, $blocks);
@@ -59,7 +59,7 @@ class NintendoConverterTest extends TestCase
     {
         $this->expectException(UnnecessaryCalculation::class);
 
-        $megabytes = new NintendoConverter(megabytes: 8);
+        $megabytes = new NintendoBlocksConverter(megabytes: 8);
         $megabytes = $megabytes->toMegabytes();
 
         $this->assertEquals(8, $megabytes);
@@ -74,7 +74,7 @@ class NintendoConverterTest extends TestCase
     {
         $this->expectException(NegativeNumberException::class);
 
-        $blocks = new NintendoConverter(blocks: -8);
+        $blocks = new NintendoBlocksConverter(blocks: -8);
         $megabytes = $blocks->toMegabytes();
 
         $this->assertEquals(-1, $megabytes);
@@ -89,7 +89,7 @@ class NintendoConverterTest extends TestCase
     {
         $this->expectException(NegativeNumberException::class);
 
-        $megabytes = new NintendoConverter(megabytes: -1);
+        $megabytes = new NintendoBlocksConverter(megabytes: -1);
         $blocks = $megabytes->toBlocks();
 
         $this->assertEquals(-8, $blocks);

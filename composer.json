@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "NickBeen\\NintendoConverter\\": "src"
+            "NickBeen\\NintendoBlocksConverter\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NickBeen\\NintendoConverter\\Tests\\": "tests"
+            "NickBeen\\NintendoBlocksConverter\\Tests\\": "tests"
         }
     },
     "scripts": {
