@@ -1,14 +1,14 @@
 <?php
 
-namespace NickBeen\NintendoConverter;
+namespace NickBeen\NintendoBlocksConverter;
 
-use NickBeen\NintendoConverter\Exceptions\InvalidArgumentException;
-use NickBeen\NintendoConverter\Exceptions\NegativeNumberException;
-use NickBeen\NintendoConverter\Exceptions\UnnecessaryCalculation;
+use NickBeen\NintendoBlocksConverter\Exceptions\InvalidArgumentException;
+use NickBeen\NintendoBlocksConverter\Exceptions\NegativeNumberException;
+use NickBeen\NintendoBlocksConverter\Exceptions\UnnecessaryCalculation;
 
 class_alias(NegativeNumberException::class, InvalidArgumentException::class);
 
-class NintendoConverter
+class NintendoBlocksConverter
 {
     private ?int $bytes = null;
 
