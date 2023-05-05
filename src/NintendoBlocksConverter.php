@@ -2,11 +2,8 @@
 
 namespace NickBeen\NintendoBlocksConverter;
 
-use NickBeen\NintendoBlocksConverter\Exceptions\InvalidArgumentException;
 use NickBeen\NintendoBlocksConverter\Exceptions\NegativeNumberException;
 use NickBeen\NintendoBlocksConverter\Exceptions\UnnecessaryCalculation;
-
-class_alias(NegativeNumberException::class, InvalidArgumentException::class);
 
 class NintendoBlocksConverter
 {
